@@ -1,2 +1,4 @@
 credentials.json
 *.log
+.idea/*
+src/__pycache__/

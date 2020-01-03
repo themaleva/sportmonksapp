@@ -1,0 +1,9 @@
+{
+  "log_file" : "/home/mark/dev/sportmonksapp/log/log.txt",
+  "fixtures_url" : "https://soccer.sportmonks.com/api/v2.0/fixtures/date/",
+  "fixture_includes" : "&include=localTeam,visitorTeam",
+  "livescores_url": "https://soccer.sportmonks.com/api/v2.0/livescores",
+  "livescores_includes": "&include=localTeam,visitorTeam,events",
+  "league_code": "501",
+  "fixturebyIDurl" : "https://soccer.sportmonks.com/api/v2.0/fixtures/"
+}
