@@ -1,51 +1,37 @@
-# Retrieve fixtures for today
-def get_fixtures():
-    # Check if fixture file exists for today, if so do nothing
-    try:
-        filename = '/home/mark/SPL_Updates/data/fixtures/' + check_date + '.json'
-        f = open(filename, 'r')
-        fixture_dict = json.loads(f.read())
-        f.close()
-        print(fixture_dict)
-        add_log('retrieved fixtures from ' + filename)  # logging
+import requests
+import json
+from utils import *
 
-    # If fixtures files doesn't exist then proceed with checking the api endpoint for new fixtures
-    except:
-        add_log('checking for new fixtures')  # logging
-        url = fixtures_url + todays_date + soccer_api + fixture_includes
-        fixtures = json.loads(requests.get(url).content)
-        add_log('finished checking for new fixtures')  # logging
-        fixture_dict = {}
-        fixture_list = "Today's Fixtures:\n\n"
 
-        # Check fixture is for the SPL (League code 501)
-        for f in fixtures['data']:
-            if f['league_id'] == league_code:
-                fixture = f['localTeam']['data']['name']
-                fixture += ' vs '
-                fixture += f['visitorTeam']['data']['name']
-                fixture_list += fixture
-                fixture_list += '\n'
-                fixture_dict[fixture] = {'id': f['id'], 'start_time': f['time']['starting_at']['time']}
-                print(fixture)
-                print(fixture_dict)
+# Check for new fixtures
+def get_new_fixtures(endpoint, league_id, date):
+    add_log(f'Beginning check for new fixtures on {date}')
+    raw_fixtures = json.loads(requests.get(endpoint).content)
+    add_log(f'Completed check for new fixtures on {date}')
+
+    if not raw_fixtures['data']:
+        add_log(f'No fixtures scheduled today ({date})')
+        return 0
+
+    else:
+        fixtures = {}
+        for f in raw_fixtures['data']:
+            # make sure the fixtures are in the specified league before adding to our dictionary
+            if f['league_id'] == league_id:
+                fixture = f['localTeam']['data']['name'] + ' vs ' + f['visitorTeam']['data']['name']
+                fixtures[fixture] = {'id': f['id'], 'start_time': f['time']['starting_at']['time']}
             else:
                 pass
 
-        # If length of fixture_list is > 19 then new fixtures must be happening today so Tweet the day's fixtures
-        if len(fixture_list) != 19:
-            add_log("tweeting today's fixtures")  # logging
-            post_tweet(fixture_list)
-            filename = '/home/mark/SPL_Updates/data/fixtures/' + check_date + '.json'
-            file = open(filename, 'w')
-            add_log("adding today's fixtures to " + filename)  # logging
-            file.write(json.dumps(fixture_dict, indent=4))
-            file.close
-        # Otherwise simply tweet there are no new fixtures today + the date
-        else:
-            add_log("tweeting there are no fixtures today")  # logging
-            post_tweet('There are no SPL games today (' + check_date + ')')
-    return (fixture_dict)
+    return fixtures
+
+
+def format_fixtures_for_twitter(fixtures):
+    fixture_list = "Today's Fixtures:\n\n"
+    for key in fixtures.keys():
+        fixture_list += f'{key} ({fixtures[key]["start_time"]})\n'
+    return fixture_list
+
 
 
 # Livescore Updates
