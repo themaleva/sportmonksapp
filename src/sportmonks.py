@@ -33,6 +33,7 @@ def format_fixtures_for_twitter(fixtures):
     return fixture_list
 
 
+### In Progress - UNTESTED ###
 def get_events(endpoint):
     add_log('checking for live updates')  # logging
     url = livescores_url + soccer_api + livescores_includes
@@ -69,4 +70,4 @@ def get_events(endpoint):
     livescore_data = json.loads(requests.get(url).content)
     for match in livescore_data['data']:
         print(match['localTeam']['data']['name'])
-    return (livescore_data)
+    return livescore_data

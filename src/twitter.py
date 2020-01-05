@@ -15,4 +15,4 @@ def post_tweet(tweet):
         add_log(f'TWEETED - {tweet}')
     except:
         add_log(f"### ERROR ### this tweet wasn't posted - Tweet: {tweet}")
-    return()
+    return
