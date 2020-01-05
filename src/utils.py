@@ -14,6 +14,10 @@ def add_log(text):
 
 
 def time_to_sleep(wake_time):
+    """
+    :param: wake_time format HH:MM
+    :return: returns total seconds until wake_time
+    """
     current_time = datetime.datetime.today()
     current_hour = (int(current_time.hour))
     wake_hour = (int(wake_time[0:2]))
@@ -42,7 +46,6 @@ def time_to_sleep(wake_time):
 
     elif wake_hour > current_hour + 1:
         sleep_time += (wake_hour - (current_hour + 1)) * 60
-        print("here")
 
     elif wake_hour > current_hour and wake_min > current_min:
         sleep_time += 60
@@ -50,8 +53,7 @@ def time_to_sleep(wake_time):
     else:
         pass
 
-
-    # Calc mins
+    # Calc minutes
     if wake_min < current_min:
         sleep_time += 60 - (current_min + 1) + wake_min
 
