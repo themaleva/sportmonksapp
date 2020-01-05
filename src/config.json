@@ -1,5 +1,5 @@
 {
-  "log_file" : "/home/mark/dev/sportmonksapp/log/log.txt",
+  "log_file" : "../log/log.txt",
   "fixtures_url" : "https://soccer.sportmonks.com/api/v2.0/fixtures/date/",
   "fixture_includes" : "&include=localTeam,visitorTeam",
   "livescores_url": "https://soccer.sportmonks.com/api/v2.0/livescores",
