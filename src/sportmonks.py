@@ -33,9 +33,7 @@ def format_fixtures_for_twitter(fixtures):
     return fixture_list
 
 
-
-# Livescore Updates
-def get_updates():
+def get_events(endpoint):
     add_log('checking for live updates')  # logging
     url = livescores_url + soccer_api + livescores_includes
 
