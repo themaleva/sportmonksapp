@@ -25,20 +25,20 @@ class Runner:
 
 if __name__ == '__main__':
 
-    while True:
+    #while True:
 
-        new_run = Runner()
+    new_run = Runner()
 
-        new_fixtures_endpoint = f"{config['fixtures_url']}{new_run.date_today()}{soccer_api}{config['fixture_includes']}"
-        get_events_endpoint = f"{config['livescores_url']}{soccer_api}{config['livescores_includes']}"
+    new_fixtures_endpoint = f"{config['fixtures_url']}{new_run.date_today()}{soccer_api}{config['fixture_includes']}"
+    get_events_endpoint = f"{config['livescores_url']}{soccer_api}{config['livescores_includes']}"
 
-        # get new fixtures from endpoint and only return those from specific league id
-        fixtures = get_new_fixtures(new_fixtures_endpoint, config['league_id'], new_run.check_date)
+    # get new fixtures from endpoint and only return those from specific league id
+    fixtures = get_new_fixtures(new_fixtures_endpoint, config['league_id'], new_run.check_date())
 
-        # if new fixtures exists then format the returned dictionary ready to tweet
-        if fixtures:
-            f = format_fixtures_for_twitter(fixtures)
-            # tweet today's fixtures
-            post_tweet(f)
-        else:
-            print(time_to_sleep("06:00"))
+    # if new fixtures exists then format the returned dictionary ready to tweet
+    if fixtures:
+        f = format_fixtures_for_twitter(fixtures)
+        # tweet today's fixtures
+        post_tweet(f)
+    else:
+        print(time_to_sleep("06:00"))
