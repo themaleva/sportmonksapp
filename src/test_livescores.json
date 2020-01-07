@@ -1,0 +1,613 @@
+{
+    "data": [
+        {
+            "aggregate_id": null,
+            "assistants": {
+                "first_assistant_id": 17249,
+                "fourth_official_id": 33606,
+                "second_assistant_id": 20114
+            },
+            "attendance": 14518,
+            "coaches": {
+                "localteam_coach_id": 896462,
+                "visitorteam_coach_id": 22145896
+            },
+            "colors": {
+                "localteam": {
+                    "color": "#C40010",
+                    "kit_colors": "#C40010,#C40010,#CA1313,#CA1313,#FF1B1B,#FF1B1B,#C40010"
+                },
+                "visitorteam": {
+                    "color": "#FDBD0F",
+                    "kit_colors": "#FDBD0F,#FDBD0F,#FAE403,#FAE403,#5C8FAE,#FFDF1B,#FDBD0F"
+                }
+            },
+            "commentaries": true,
+            "deleted": false,
+            "details": null,
+            "events": {
+                "data": [
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879658,
+                        "id": 11879658001,
+                        "injuried": null,
+                        "minute": 13,
+                        "player_id": 173043,
+                        "player_name": "C. McLennan",
+                        "reason": null,
+                        "related_player_id": 6648042,
+                        "related_player_name": "L. Ferguson",
+                        "result": "1-0",
+                        "team_id": "273",
+                        "type": "goal"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879658,
+                        "id": 11879658002,
+                        "injuried": null,
+                        "minute": 58,
+                        "player_id": 12371926,
+                        "player_name": "J. Gallagher",
+                        "reason": null,
+                        "related_player_id": 8042,
+                        "related_player_name": "R. Hedges",
+                        "result": "",
+                        "team_id": "273",
+                        "type": "substitution"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879658,
+                        "id": 11879658003,
+                        "injuried": null,
+                        "minute": 67,
+                        "player_id": 173948,
+                        "player_name": "B. Anderson",
+                        "reason": null,
+                        "related_player_id": 173043,
+                        "related_player_name": "C. McLennan",
+                        "result": "",
+                        "team_id": "273",
+                        "type": "substitution"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879658,
+                        "id": 11879658004,
+                        "injuried": null,
+                        "minute": 74,
+                        "player_id": 171889,
+                        "player_name": "S. Robinson",
+                        "reason": null,
+                        "related_player_id": 71099,
+                        "related_player_name": "A. Souda",
+                        "result": "",
+                        "team_id": "258",
+                        "type": "substitution"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879658,
+                        "id": 11879658005,
+                        "injuried": true,
+                        "minute": 78,
+                        "player_id": 741623,
+                        "player_name": "D. Campbell",
+                        "reason": null,
+                        "related_player_id": 23926,
+                        "related_player_name": "F. Ojo",
+                        "result": "",
+                        "team_id": "273",
+                        "type": "substitution"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879658,
+                        "id": 11879658006,
+                        "injuried": null,
+                        "minute": 80,
+                        "player_id": 172843,
+                        "player_name": "C. Erskine",
+                        "reason": null,
+                        "related_player_id": 173733,
+                        "related_player_name": "C. Sibbald",
+                        "result": "",
+                        "team_id": "258",
+                        "type": "substitution"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879658,
+                        "id": 11879658007,
+                        "injuried": null,
+                        "minute": 81,
+                        "player_id": 173948,
+                        "player_name": "B. Anderson",
+                        "reason": null,
+                        "related_player_id": null,
+                        "related_player_name": null,
+                        "result": "2-0",
+                        "team_id": "273",
+                        "type": "goal"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879658,
+                        "id": 11879658008,
+                        "injuried": null,
+                        "minute": 85,
+                        "player_id": 7447,
+                        "player_name": "A. Taylor",
+                        "reason": null,
+                        "related_player_id": null,
+                        "related_player_name": null,
+                        "result": "",
+                        "team_id": "273",
+                        "type": "yellowcard"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879658,
+                        "id": 11879658009,
+                        "injuried": null,
+                        "minute": 86,
+                        "player_id": 174296,
+                        "player_name": "L. Dykes",
+                        "reason": null,
+                        "related_player_id": 172711,
+                        "related_player_name": "S. Lawless",
+                        "result": "2-1",
+                        "team_id": "258",
+                        "type": "goal"
+                    }
+                ]
+            },
+            "formations": {
+                "localteam_formation": "4-2-3-1",
+                "visitorteam_formation": "4-2-3-1"
+            },
+            "group_id": null,
+            "id": 11879658,
+            "league_id": 501,
+            "leg": "1/1",
+            "localTeam": {
+                "data": {
+                    "country_id": 1161,
+                    "current_season_id": 16222,
+                    "founded": 1903,
+                    "id": 273,
+                    "legacy_id": 690,
+                    "logo_path": "https://cdn.sportmonks.com/images//soccer/teams/17/273.png",
+                    "name": "Aberdeen",
+                    "national_team": false,
+                    "short_code": "ABE",
+                    "twitter": null,
+                    "venue_id": 8928
+                }
+            },
+            "localteam_id": 273,
+            "neutral_venue": false,
+            "pitch": null,
+            "referee_id": 14853,
+            "round_id": 173660,
+            "scores": {
+                "et_score": null,
+                "ft_score": "2-1",
+                "ht_score": "1-0",
+                "localteam_pen_score": null,
+                "localteam_score": 2,
+                "ps_score": null,
+                "visitorteam_pen_score": null,
+                "visitorteam_score": 1
+            },
+            "season_id": 16222,
+            "stage_id": 77444704,
+            "standings": {
+                "localteam_position": 4,
+                "visitorteam_position": 6
+            },
+            "time": {
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null,
+                "minute": 90,
+                "second": null,
+                "starting_at": {
+                    "date": "2019-12-26",
+                    "date_time": "2019-12-26 15:00:00",
+                    "time": "15:00:00",
+                    "timestamp": 1577372400,
+                    "timezone": "UTC"
+                },
+                "status": "FT"
+            },
+            "venue_id": 8928,
+            "visitorTeam": {
+                "data": {
+                    "country_id": 1161,
+                    "current_season_id": 16222,
+                    "founded": 1943,
+                    "id": 258,
+                    "legacy_id": 710,
+                    "logo_path": "https://cdn.sportmonks.com/images//soccer/teams/2/258.png",
+                    "name": "Livingston",
+                    "national_team": false,
+                    "short_code": null,
+                    "twitter": null,
+                    "venue_id": 8943
+                }
+            },
+            "visitorteam_id": 258,
+            "weather_report": {
+                "clouds": "90%",
+                "code": "mist",
+                "coordinates": {
+                    "lat": 46.98,
+                    "lon": -123.82
+                },
+                "humidity": "100%",
+                "icon": "https://cdn.sportmonks.com/images/weather/50d.png",
+                "pressure": 1021,
+                "temperature": {
+                    "temp": 33.78,
+                    "unit": "fahrenheit"
+                },
+                "temperature_celcius": {
+                    "temp": 1,
+                    "unit": "celcius"
+                },
+                "type": "mist",
+                "updated_at": "2019-12-26T16:45:07.193507Z",
+                "wind": {
+                    "degree": 80,
+                    "speed": "8.05 m/s"
+                }
+            },
+            "winner_team_id": 273,
+            "winning_odds_calculated": true
+        },
+        {
+            "aggregate_id": null,
+            "assistants": {
+                "first_assistant_id": 14860,
+                "fourth_official_id": 17265,
+                "second_assistant_id": 15817
+            },
+            "attendance": 19313,
+            "coaches": {
+                "localteam_coach_id": 896537,
+                "visitorteam_coach_id": 171828
+            },
+            "colors": {
+                "localteam": {
+                    "color": "#5B000F",
+                    "kit_colors": "#5B000F,#5B000F,#5F0A1F,#5F0A1F,#901E3A,#901E3A,#F0F0F0"
+                },
+                "visitorteam": {
+                    "color": "#007848",
+                    "kit_colors": "#F0F0F0,#007848,#007848,#F0F0F0,#5C8FAE,#FFDF1B,#F0F0F0"
+                }
+            },
+            "commentaries": true,
+            "deleted": false,
+            "details": null,
+            "events": {
+                "data": [
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879660,
+                        "id": 11879660001,
+                        "injuried": null,
+                        "minute": 6,
+                        "player_id": 172795,
+                        "player_name": "M. Boyle",
+                        "reason": null,
+                        "related_player_id": 2820,
+                        "related_player_name": "S. Allan",
+                        "result": "0-1",
+                        "team_id": "66",
+                        "type": "goal"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879660,
+                        "id": 11879660002,
+                        "injuried": null,
+                        "minute": 31,
+                        "player_id": 172795,
+                        "player_name": "M. Boyle",
+                        "reason": null,
+                        "related_player_id": 2820,
+                        "related_player_name": "S. Allan",
+                        "result": "0-2",
+                        "team_id": "66",
+                        "type": "goal"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879660,
+                        "id": 11879660003,
+                        "injuried": null,
+                        "minute": 46,
+                        "player_id": 10534,
+                        "player_name": "O. Bozanic",
+                        "reason": null,
+                        "related_player_id": 64860,
+                        "related_player_name": "L. Damour",
+                        "result": "",
+                        "team_id": "314",
+                        "type": "substitution"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879660,
+                        "id": 11879660004,
+                        "injuried": null,
+                        "minute": 46,
+                        "player_id": 741625,
+                        "player_name": "E. Henderson",
+                        "reason": null,
+                        "related_player_id": 2344,
+                        "related_player_name": "A. White",
+                        "result": "",
+                        "team_id": "314",
+                        "type": "substitution"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879660,
+                        "id": 11879660005,
+                        "injuried": null,
+                        "minute": 52,
+                        "player_id": 12594,
+                        "player_name": "J. Mulraney",
+                        "reason": null,
+                        "related_player_id": null,
+                        "related_player_name": null,
+                        "result": "",
+                        "team_id": "314",
+                        "type": "yellowcard"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879660,
+                        "id": 11879660006,
+                        "injuried": null,
+                        "minute": 55,
+                        "player_id": 741625,
+                        "player_name": "E. Henderson",
+                        "reason": null,
+                        "related_player_id": null,
+                        "related_player_name": null,
+                        "result": "",
+                        "team_id": "314",
+                        "type": "yellowcard"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879660,
+                        "id": 11879660007,
+                        "injuried": true,
+                        "minute": 69,
+                        "player_id": 172945,
+                        "player_name": "S. Mallan",
+                        "reason": null,
+                        "related_player_id": 2820,
+                        "related_player_name": "S. Allan",
+                        "result": "",
+                        "team_id": "66",
+                        "type": "substitution"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879660,
+                        "id": 11879660008,
+                        "injuried": null,
+                        "minute": 72,
+                        "player_id": 2781,
+                        "player_name": "J. Newell",
+                        "reason": null,
+                        "related_player_id": 7885,
+                        "related_player_name": "D. Horgan",
+                        "result": "",
+                        "team_id": "66",
+                        "type": "substitution"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879660,
+                        "id": 11879660009,
+                        "injuried": null,
+                        "minute": 77,
+                        "player_id": 786222,
+                        "player_name": "A. Keena",
+                        "reason": null,
+                        "related_player_id": 12594,
+                        "related_player_name": "J. Mulraney",
+                        "result": "",
+                        "team_id": "314",
+                        "type": "substitution"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879660,
+                        "id": 11879660010,
+                        "injuried": null,
+                        "minute": 82,
+                        "player_id": 8860,
+                        "player_name": "M. Smith",
+                        "reason": null,
+                        "related_player_id": null,
+                        "related_player_name": null,
+                        "result": "",
+                        "team_id": "314",
+                        "type": "yellowcard"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879660,
+                        "id": 11879660011,
+                        "injuried": null,
+                        "minute": 82,
+                        "player_id": 172795,
+                        "player_name": "M. Boyle",
+                        "reason": null,
+                        "related_player_id": null,
+                        "related_player_name": null,
+                        "result": "",
+                        "team_id": "66",
+                        "type": "yellowcard"
+                    },
+                    {
+                        "extra_minute": null,
+                        "fixture_id": 11879660,
+                        "id": 11879660012,
+                        "injuried": null,
+                        "minute": 85,
+                        "player_id": 28555,
+                        "player_name": "V. Slivka",
+                        "reason": null,
+                        "related_player_id": null,
+                        "related_player_name": null,
+                        "result": "",
+                        "team_id": "66",
+                        "type": "yellowcard"
+                    }
+                ]
+            },
+            "formations": {
+                "localteam_formation": "4-3-2-1",
+                "visitorteam_formation": "4-3-1-2"
+            },
+            "group_id": null,
+            "id": 11879660,
+            "league_id": 501,
+            "leg": "1/1",
+            "localTeam": {
+                "data": {
+                    "country_id": 1161,
+                    "current_season_id": 16222,
+                    "founded": 1874,
+                    "id": 314,
+                    "legacy_id": 701,
+                    "logo_path": "https://cdn.sportmonks.com/images//soccer/teams/26/314.png",
+                    "name": "Hearts",
+                    "national_team": false,
+                    "short_code": null,
+                    "twitter": null,
+                    "venue_id": 336296
+                }
+            },
+            "localteam_id": 314,
+            "neutral_venue": false,
+            "pitch": null,
+            "referee_id": 15818,
+            "round_id": 173660,
+            "scores": {
+                "et_score": null,
+                "ft_score": "0-2",
+                "ht_score": "0-2",
+                "localteam_pen_score": null,
+                "localteam_score": 0,
+                "ps_score": null,
+                "visitorteam_pen_score": null,
+                "visitorteam_score": 2
+            },
+            "season_id": 16222,
+            "stage_id": 77444704,
+            "standings": {
+                "localteam_position": 12,
+                "visitorteam_position": 7
+            },
+            "time": {
+                "added_time": null,
+                "extra_minute": null,
+                "injury_time": null,
+                "minute": 90,
+                "second": null,
+                "starting_at": {
+                    "date": "2019-12-26",
+                    "date_time": "2019-12-26 12:30:00",
+                    "time": "12:30:00",
+                    "timestamp": 1577363400,
+                    "timezone": "UTC"
+                },
+                "status": "FT"
+            },
+            "venue_id": 336296,
+            "visitorTeam": {
+                "data": {
+                    "country_id": 1161,
+                    "current_season_id": 16222,
+                    "founded": 1875,
+                    "id": 66,
+                    "legacy_id": 702,
+                    "logo_path": "https://cdn.sportmonks.com/images//soccer/teams/2/66.png",
+                    "name": "Hibernian",
+                    "national_team": false,
+                    "short_code": "HIB",
+                    "twitter": null,
+                    "venue_id": 8946
+                }
+            },
+            "visitorteam_id": 66,
+            "weather_report": {
+                "clouds": "40%",
+                "code": "clouds",
+                "coordinates": {
+                    "lat": 55.95,
+                    "lon": -3.19
+                },
+                "humidity": "81%",
+                "icon": "https://cdn.sportmonks.com/images/weather/03d.png",
+                "pressure": 1015,
+                "temperature": {
+                    "temp": 42.62,
+                    "unit": "fahrenheit"
+                },
+                "temperature_celcius": {
+                    "temp": 5.9,
+                    "unit": "celcius"
+                },
+                "type": "scattered clouds",
+                "updated_at": "2019-12-26T14:15:02.138411Z",
+                "wind": {
+                    "degree": 60,
+                    "speed": "8.05 m/s"
+                }
+            },
+            "winner_team_id": 66,
+            "winning_odds_calculated": true
+        }
+    ],
+    "meta": {
+        "plan": {
+            "name": "Free Plan",
+            "price": "0.00",
+            "request_limit": "3,1"
+        },
+        "sports": [
+            {
+                "current": true,
+                "id": 1,
+                "name": "Soccer"
+            },
+            {
+                "current": false,
+                "id": 6,
+                "name": "Cricket"
+            }
+        ],
+        "subscription": {
+            "ends_at": null,
+            "started_at": {
+                "date": "2017-03-20 21:02:56.000000",
+                "timezone": "UTC",
+                "timezone_type": 3
+            },
+            "trial_ends_at": null
+        }
+    }
+}

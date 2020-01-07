@@ -61,8 +61,8 @@ def time_to_sleep(wake_time):
         sleep_time += wake_min - (current_min + 1)
 
     # Testing outputs
-    sleep_hours = sleep_time // 60
-    sleep_mins = sleep_time - (sleep_hours * 60)
+    # sleep_hours = sleep_time // 60
+    # sleep_mins = sleep_time - (sleep_hours * 60)
     # if sleep_hours < 10:
     #     sleep_hours = f'0{sleep_hours}'
     # if sleep_mins < 10:
@@ -82,12 +82,21 @@ def time_to_sleep(wake_time):
 
     return sleep_time * 60
 
+
 def date_today():  # YYYY-MM-DD Format
     today = datetime.datetime.now()  # Raw date
     date_today = today.strftime('%Y') + '-' + today.strftime('%m') + '-' + today.strftime('%d')
     return date_today
 
+
 def check_date():  # DD-MMM-YYYY Format
     today = datetime.datetime.now()  # Raw date
     check_date = today.strftime('%d') + '-' + today.strftime('%B') + '-' + today.strftime('%Y')
     return check_date
+
+
+def prettify_json(raw_json):
+    with open(raw_json) as json_file:
+        parsed = json.load(json_file)
+        pretty_json = (json.dumps(parsed, indent=4, sort_keys=True))
+    return pretty_json

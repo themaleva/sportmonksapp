@@ -49,14 +49,14 @@ def get_kickoffs(fixtures):
 
     return kick_offs
 
-### In Progress - UNTESTED ###
+
+# TODO: Finish this function to tidy up incoming events
 def get_events(endpoint):
-    add_log('checking for live updates')  # logging
-
-
+    add_log('Checking for live updates')  # logging
 
     livescore_data = json.loads(requests.get(endpoint).content)
 
     for match in livescore_data['data']:
         print(match['localTeam']['data']['name'])
+
     return livescore_data
