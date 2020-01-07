@@ -4,10 +4,9 @@ import json
 with open('./config.json', 'r') as config_file:
     config = json.load(config_file)
 
-today = datetime.datetime.now() #Raw date
-
 
 def add_log(text):
+    today = datetime.datetime.now()  # Raw date
     log = open(config['log_file'], 'a')
     log.write('*** ' + str(today) + ' *** ' + text + '\n')
     log.close()
@@ -18,6 +17,7 @@ def time_to_sleep(wake_time):
     :param: wake_time format HH:MM
     :return: returns total seconds until wake_time
     """
+
     current_time = datetime.datetime.today()
     current_hour = (int(current_time.hour))
     wake_hour = (int(wake_time[0:2]))
@@ -81,3 +81,13 @@ def time_to_sleep(wake_time):
     # print(f'Time to sleep - {sleep_hours}:{sleep_mins}')
 
     return sleep_time * 60
+
+def date_today():  # YYYY-MM-DD Format
+    today = datetime.datetime.now()  # Raw date
+    date_today = today.strftime('%Y') + '-' + today.strftime('%m') + '-' + today.strftime('%d')
+    return date_today
+
+def check_date():  # DD-MMM-YYYY Format
+    today = datetime.datetime.now()  # Raw date
+    check_date = today.strftime('%d') + '-' + today.strftime('%B') + '-' + today.strftime('%Y')
+    return check_date

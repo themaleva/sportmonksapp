@@ -33,41 +33,30 @@ def format_fixtures_for_twitter(fixtures):
     return fixture_list
 
 
+def get_kickoffs(fixtures):
+    # get stored fixtures from today's file
+
+    kick_offs = []
+
+    for fixture in fixtures:
+        ko_time = (fixtures[fixture]['start_time'])
+        if ko_time in kick_offs:
+            pass
+        else:
+            kick_offs.append(ko_time)
+
+    sorted(kick_offs)
+
+    return kick_offs
+
 ### In Progress - UNTESTED ###
 def get_events(endpoint):
     add_log('checking for live updates')  # logging
-    url = livescores_url + soccer_api + livescores_includes
 
-    # get stored fixtures from today's file
-    todays_fixtures = get_fixtures()
-    first_kickoff = []
 
-    for fixture in todays_fixtures:
-        ko_time = (todays_fixtures[fixture]['start_time'])
-        if ko_time in first_kickoff:
-            pass
-        else:
-            first_kickoff.append(ko_time)
 
-    first_kickoff.sort()
-    next_kickoff = first_kickoff.pop()
+    livescore_data = json.loads(requests.get(endpoint).content)
 
-    current_time = datetime.datetime.today()
-
-    current_hour = (int(current_time.hour))
-    ko_hour = (int(next_kickoff[0:2]))
-    current_min = (int(current_time.minute))
-    ko_min = (int(next_kickoff[3:5]))
-
-    if ko_hour < (current_hour + 1):
-        if ko_min > current_min:
-            print(sleep_time * 3600)
-            # time.sleep(sleep_time*3600) #sleep for 1 hour
-    else:
-        sleep_time = ko_hour - current_hour
-        print(sleep_time * 3600)
-
-    livescore_data = json.loads(requests.get(url).content)
     for match in livescore_data['data']:
         print(match['localTeam']['data']['name'])
     return livescore_data
