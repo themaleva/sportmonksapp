@@ -27,12 +27,18 @@ if __name__ == '__main__':
     # if new fixtures exists then format the returned dictionary ready to tweet
     if fixtures:
         f = format_fixtures_for_twitter(fixtures)
-        post_tweet(f) # tweet today's fixtures
+        # post_tweet(f) # tweet today's fixtures
         kickoffs = get_kickoffs(fixtures) # get kick-off times from today's matches
         print(time_to_sleep(kickoffs.pop(0))) # calculate sleep time until 1st kickoff
     else:
         print(time_to_sleep("06:00"))
 
 
-    my_json = prettify_json("./test_livescores.json")
-    print(my_json)
+    # TODO: Finish this but add to the process events function in sportmonks.py
+    with open('./test_livescores.json') as file:
+        data = json.load(file)
+        matches = process_events(data)
+        for match in matches['data']:
+            for event in match['events']['data']:
+                if event['type'] == 'goal':
+

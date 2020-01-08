@@ -56,7 +56,9 @@ def get_events(endpoint):
 
     livescore_data = json.loads(requests.get(endpoint).content)
 
-    for match in livescore_data['data']:
-        print(match['localTeam']['data']['name'])
-
     return livescore_data
+
+
+def process_events(data):
+    events = data
+    return data
