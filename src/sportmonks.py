@@ -50,7 +50,6 @@ def get_kickoffs(fixtures):
     return kick_offs
 
 
-# TODO: Finish this function to tidy up incoming events
 def get_events(endpoint):
     add_log('Checking for live updates')  # logging
 
@@ -59,6 +58,32 @@ def get_events(endpoint):
     return livescore_data
 
 
-def process_events(data):
-    events = data
-    return data
+def check_all_games_ft(matches):
+    total_matches = len(matches['data'])
+    completed_matches = 0
+    for match in matches['data']:
+        if match['time']['status'] == 'FT':
+            completed_matches += 1
+        else:
+            pass
+
+    if total_matches == completed_matches:
+        return True
+    else:
+        return False
+
+
+def process_events(matches):
+    events = []
+    # for match in matches['data']:
+    #     for event in match['events']['data']:
+    #         if event['type'] == 'goal':
+
+    return events
+
+
+def tweet_events(events):
+
+    for event in events:
+
+
