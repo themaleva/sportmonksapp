@@ -58,7 +58,7 @@ def get_events(endpoint):
     return livescore_data
 
 
-def check_all_games_ft(matches):
+def all_games_finished(matches):
     total_matches = len(matches['data'])
     completed_matches = 0
     for match in matches['data']:
@@ -73,17 +73,36 @@ def check_all_games_ft(matches):
         return False
 
 
-def process_events(matches):
-    events = []
-    # for match in matches['data']:
-    #     for event in match['events']['data']:
-    #         if event['type'] == 'goal':
+def process_events(matches, processed):
 
-    return events
+    # Parse all events and pull out the goal events
+    # events = [event for match in matches['data'] for event in match['events']['data'] if event['type'] == 'goal']
+
+    events = {}
+
+    for match in matches['data']:
+        goals = {}
+        for event in match['events']['data']:
+
+            if event['type'] == 'goal' and event['id'] not in processed:
+                goals[event['id']] = {'score': event['result'],
+                                      'minute': event['minute'],
+                                      'scorer': event['player_name'],
+                                      'assist_by': event['related_player_name'],
+                                      'team_id': event['team_id']
+                                      }
+
+        events[event['id']['home_id']] = match['localteam_id']
+        events[event['id']['home_name']] = match['localTeam']['data']['name']
+        events[event['id']['away_id']] = match['visitorteam_id']
+        events[event['id']['away_name']] = match['visitorTeam']['data']['name']
+        events[event['id']['goals']] = goals
+
+    return events, processed
 
 
 def tweet_events(events):
 
-    for event in events:
+    # for event in events:
 
-
+    return

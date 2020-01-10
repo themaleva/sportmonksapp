@@ -31,26 +31,25 @@ if __name__ == '__main__':
         # TODO: Uncomment below
         # time_to_sleep(kickoffs.pop(0))) # calculate sleep time until 1st kickoff
 
+        processed_events = []
+
         # While all games haven't finished, check for new events
-        while not all_games_finished(get_events(get_events_endpoint)):
-            live_events = get_events(get_events_endpoint)
-            new_events = process_events(live_events)
+        while all_games_finished(get_events(get_events_endpoint)):
 
-            for event in events:
-                post_tweet(event['tweet'])
+            with open('./test_livescores.json') as file:
+                live_events = json.load(file)
 
+            #live_events = get_events(get_events_endpoint)
+            new_events, processed_events = process_events(live_events, processed_events)
 
+            print(new_events)
+
+            for event in new_events:
+                # post_tweet(event['tweet'])
+                # build tweet string
+                tweet_str = f''
 
     else:
         pass
         # TODO: Uncomment below
         # time_to_sleep("06:00"))
-
-
-    # TODO: Finish this but add to the process events function in sportmonks.py
-    with open('./test_livescores.json') as file:
-        data = json.load(file)
-        matches = process_events(data)
-        # for match in matches['data']:
-        #     for event in match['events']['data']:
-        #         if event['type'] == 'goal':
