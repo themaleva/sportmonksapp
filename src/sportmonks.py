@@ -83,20 +83,27 @@ def process_events(matches, processed):
     for match in matches['data']:
         goals = {}
         for event in match['events']['data']:
+            events[match['id']] = {}
 
+            # Add team info to events dictionary
+            events[match['id']]['teams'] = {'data': {match['localTeam']['data']['id']: match['localTeam']['data']['name'],
+                                             match['visitorTeam']['data']['id']: match['visitorTeam']['data']['name']
+                                                     }
+                                            }
+
+            # If event is a goal and hasn't already been processed then add to dictionary
             if event['type'] == 'goal' and event['id'] not in processed:
+
                 goals[event['id']] = {'score': event['result'],
                                       'minute': event['minute'],
                                       'scorer': event['player_name'],
                                       'assist_by': event['related_player_name'],
-                                      'team_id': event['team_id']
+                                      'team_id': event['team_id'],
+                                      'tweet': "" # TODO: Figure out how to pull together the right info for this
                                       }
 
-        events[event['id']['home_id']] = match['localteam_id']
-        events[event['id']['home_name']] = match['localTeam']['data']['name']
-        events[event['id']['away_id']] = match['visitorteam_id']
-        events[event['id']['away_name']] = match['visitorTeam']['data']['name']
-        events[event['id']['goals']] = goals
+            # Add goals dict to main events dict
+            events[match['id']]['goals'] = {'data': goals}
 
     return events, processed
 
