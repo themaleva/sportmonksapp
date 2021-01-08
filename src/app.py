@@ -1,8 +1,8 @@
 import datetime
 import json
-from twitter import *
-from sportmonks import *
-from utils import *
+from .twitter import *
+from .sportmonks import *
+from .utils import *
 
 with open('./config.json') as config_file:
     config = json.load(config_file)

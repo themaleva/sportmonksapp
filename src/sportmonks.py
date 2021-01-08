@@ -1,6 +1,6 @@
 import requests
 import json
-from utils import *
+from .utils import *
 
 
 # Check for new fixtures

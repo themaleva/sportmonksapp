@@ -1,6 +1,6 @@
 import json
 from twython import Twython
-from utils import *
+from .utils import *
 
 with open('./credentials.json', 'r') as creds_file:
     creds = json.load(creds_file)
